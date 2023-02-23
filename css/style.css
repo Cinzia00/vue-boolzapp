@@ -10,27 +10,40 @@ ul, ol, menu {
 }
 
 .header-bg-green {
-    height: 50px;
+    height: 130px;
     background-color: #009688;
 }
 
 .main {
-    background-color: rgb(237, 235, 215);
+    height: 100vh;
+    background-color: rgb(250, 249, 233);
+    position: relative;
 }
 
 .main-content {
-    position: sticky;
-    z-index: 999;
-    padding-right: 0 !important;
-    padding-left: 0 !important; 
-    height: calc(100vh - 50px);
+    /* padding-right: 0 !important;
+    padding-left: 0 !important;  */
+    height: 95vh;
     flex-grow: 1;
     overflow-y: auto;
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    transform: translate(-50%);
+
 }
 
 .sidebar {
     width: 450px;
     flex-shrink: 0;
+    background-color: white;
+    border-right: 1px solid lightgray;
+}
+
+.scrollbar {
+    height: 100%;
+    overflow-y: scroll;
+    flex-grow: 1;
 }
 
 .content {
@@ -48,7 +61,7 @@ ul, ol, menu {
 }
 
 .ultimo-accesso {
-    font-size: 12px;
+    font-size: 13px;
     color: gray;
 }
 
@@ -61,9 +74,28 @@ ul, ol, menu {
     height: 70px;
 }
 
-.height-size {
-    height: 70px;
-    background-color: aliceblue;
+.height-size{
+    height: 80px;
+    border-top: 1px solid rgb(247, 244, 244);
+
+}
+
+.height-size:hover,
+.active {
+    border-top: 1px solid lightgray;
+    background-color:#D1D9DF ;
+}
+
+.contenitor-icon-bell {
+    
+    width: 40px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 50%;
+    margin-left: 20px;
+    margin-right: 10px;
+    color: #8EDAFC;
+    font-size: 18px;
 }
 
 .attiva-notif-desktop {
@@ -72,18 +104,12 @@ ul, ol, menu {
     text-decoration: underline;
 }
 
-.icon-bell {
-    width: 40px;
-    background-color: white;
-    padding: 10px;
-    border-radius: 50%;
-    margin-left: 20px;
-    margin-right: 10px;
-    color: #8EDAFC;
-}
-
 .input {
     width: 98%;
+    padding: 6px;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    flex-grow: 1;
 }
 
 .footer {
@@ -97,6 +123,43 @@ ul, ol, menu {
     flex-grow: 1;
 }
 
-.input-footer {
+.box-input input{
     width: 100%;
+    padding: 12px;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+.messaggi-chat{
+    position: relative;
+    max-width: 50%;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.messaggi-chat.received{
+    background-color: white;
+}
+
+.messaggi-chat.sent { 
+    background-color: #D5F9BA;
+}
+
+.chat-container {
+    height: 100%;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    padding: 50px 30px;
+    gap: 25px;
+    /* align-items: flex-end; */
+}
+
+.time {
+    position: absolute;
+    bottom: 3px;
+    right: 3px;
+    color: gray;
 }
