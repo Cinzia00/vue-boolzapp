@@ -137,6 +137,7 @@ ul, ol, menu {
     padding: 15px;
     border-radius: 10px;
     font-size: 15px;
+    margin-top: 10px ;
 }
 
 .messaggi-chat.received{
@@ -145,6 +146,7 @@ ul, ol, menu {
 
 .messaggi-chat.sent { 
     background-color: #D5F9BA;
+    align-self: flex-end;
 }
 
 .chat-container {
